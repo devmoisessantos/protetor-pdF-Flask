@@ -16,4 +16,4 @@ def create_app():
 
 
 if __name__ == '__main__':
-    app = create_app()  # Cria a instância do app
+    create_app()  # Cria a instância do app
