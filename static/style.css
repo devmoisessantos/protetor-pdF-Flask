@@ -87,7 +87,7 @@ input:focus {
     outline: none;
 }
 
-button[type="submit"] {
+input[type="submit"] {
     padding: 1rem 2rem;
     background-color: #4CAF50;
     color: white;
@@ -101,12 +101,12 @@ button[type="submit"] {
     transition: background-color 0.3s, transform 0.2s ease-in-out;
 }
 
-button:hover {
+input[type="submit"]:hover {
     background-color: #45a049;
     transform: translateY(-3px);
 }
 
-button:active {
+input[type="submit"]:active {
     transform: translateY(1px);
 }
 
