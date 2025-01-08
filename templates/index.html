@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ferramenta para proteger arquivos PDF de forma segura e rápida.">
+    <meta name="author" content="devmoisessantos">
+    <title>Proteger PDF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Proteger PDF</h1>
+    </header>
+    <main>
+        <p>Bem-vindo à ferramenta de proteção de PDFs. <br>Selecione seu arquivo para começar.</p>
+        <hr>
+        <div class="container">
+            <form method="post" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <div>
+                    <br><br>
+                    <label for="cpf" style="display: block;">CPF</label><br>
+                    {{ form.cpf(size=26) }}
+                </div>
+                <div>
+                    <br>
+                    <label for="position" style="display: block;">Posição</label><br>
+                    {{ form.position() }}
+                </div>
+                <div>
+                    <br>
+                    <h2 for="color-picker" class="color-label" style="display: block;">Escolha a Cor</h2>
+                    <input type="color" id="color-picker"/>
+
+                </div>
+                <div>
+                    <br>
+                    <label for="file" style="display: block;">Arquivo</label><br>
+                    <input type="file" id="file" name="file" >
+                </div>
+                <div>
+                    <br>
+                    <button type="submit" style="display: block;">Enviar</button>
+                </div>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                                <li><p>{{ message }}</p></li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 devmoisessantos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
