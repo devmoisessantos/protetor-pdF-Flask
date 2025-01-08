@@ -1,0 +1,140 @@
+/* Geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="color"],
+select {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="color"] {
+    appearance: none;
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 1rem 2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 80%;
+    max-width: 250px;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 480px) {
+    form {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Flash Messages */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li p {
+    background-color: #ffcccc;
+    color: #d8000c;
+    padding: 0.8rem;
+    border-radius: 4px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #d8000c;
+}
