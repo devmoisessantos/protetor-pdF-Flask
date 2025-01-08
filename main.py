@@ -15,5 +15,7 @@ def create_app():
     return app
 
 
+app = create_app()  # Expondo a instância para o Gunicorn
+
 if __name__ == '__main__':
-    create_app()  # Cria a instância do app
+    app.run()  # Executando apenas para desenvolvimento local
