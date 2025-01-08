@@ -30,7 +30,7 @@
                 </div>
                 <div>
                     <br>
-                    <h2 for="color-picker" class="color-label" style="display: block;">Escolha a Cor</h2>
+                    <label for="color-picker" class="color-label" style="display: block;">Escolha a Cor</label>
                     <input type="color" id="color-picker"/>
 
                 </div>
@@ -41,7 +41,7 @@
                 </div>
                 <div>
                     <br>
-                    <button type="submit" style="display: block;">Enviar</button>
+                    <input type="submit" style="display: block;" value="Enviar">
                 </div>
                 {% with messages = get_flashed_messages() %}
                     {% if messages %}
