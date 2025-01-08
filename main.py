@@ -17,4 +17,3 @@ def create_app():
 
 if __name__ == '__main__':
     app = create_app()  # Cria a instância do app
-    app.run(debug=True)
